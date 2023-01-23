@@ -1,14 +1,16 @@
 package com.killerinstinct.containmentzone.repository;
 
-import com.killerinstinct.containmentzone.model.User;
+import com.killerinstinct.containmentzone.model.Zone;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
 import java.util.Optional;
 
 @Repository
-public interface UserRepository extends JpaRepository<User,Integer> {
+public interface ZoneRepository extends JpaRepository<Zone,Integer> {
 
-    Optional<User> findByUserName(String userName);
+    List<Zone> findByPincode(int pincode);
 
 }
+
