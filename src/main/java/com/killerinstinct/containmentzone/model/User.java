@@ -13,6 +13,8 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
     private int id;
+    @Column(name = "email")
+    private String email;
     @Column(name = "name")
     private String userName;
     @Column(name = "password")
